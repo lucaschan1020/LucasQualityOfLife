@@ -4,8 +4,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-public class FastFlyBreak
-{
+public class FastFlyBreak {
     public FastFlyBreak() {
         MinecraftForge.EVENT_BUS.register(this);
     }
