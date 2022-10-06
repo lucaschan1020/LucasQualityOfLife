@@ -1,6 +1,5 @@
 package com.lucaschan1020.lucasqualityoflife;
 
-import com.lucaschan1020.lucasqualityoflife.Behaviors.FastFlyBreak;
 import com.lucaschan1020.lucasqualityoflife.Commands.Fly;
 import cpw.mods.fml.common.event.*;
 
@@ -15,7 +14,7 @@ public class CommonProxy {
         LucasQualityOfLife.info(
                 "I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
 
-        new FastFlyBreak();
+        //        new FastFlyBreak();
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."
