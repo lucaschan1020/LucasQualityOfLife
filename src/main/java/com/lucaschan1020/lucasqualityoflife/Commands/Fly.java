@@ -26,6 +26,10 @@ public class Fly extends CommandBase {
         return "/fly [true|false] Toggle flight mode.";
     }
 
+    public int getRequiredPermissionLevel() {
+        return 3;
+    }
+
     @Override
     public void processCommand(ICommandSender sender, String[] args) {
         if (!(sender instanceof EntityPlayerMP)) {
@@ -56,7 +60,6 @@ public class Fly extends CommandBase {
 
         player.capabilities.allowFlying = true;
         if (!player.onGround) player.capabilities.isFlying = true;
-        player.addChatComponentMessage(new ChatComponentText("Misc"));
         player.sendPlayerAbilities();
     }
 
