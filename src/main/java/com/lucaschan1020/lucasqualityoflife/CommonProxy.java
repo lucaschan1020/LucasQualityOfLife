@@ -1,5 +1,6 @@
-package com.myname.mymodid;
+package com.lucaschan1020.lucasqualityoflife;
 
+import com.lucaschan1020.lucasqualityoflife.Commands.Fly;
 import cpw.mods.fml.common.event.*;
 
 public class CommonProxy {
@@ -9,8 +10,9 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.syncronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        MyMod.info(Config.greeting);
-        MyMod.info("I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
+        LucasQualityOfLife.info(Config.greeting);
+        LucasQualityOfLife.info(
+                "I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."
@@ -22,7 +24,9 @@ public class CommonProxy {
     public void serverAboutToStart(FMLServerAboutToStartEvent event) {}
 
     // register server commands in this event handler
-    public void serverStarting(FMLServerStartingEvent event) {}
+    public void serverStarting(FMLServerStartingEvent event) {
+        event.registerServerCommand(new Fly());
+    }
 
     public void serverStarted(FMLServerStartedEvent event) {}
 

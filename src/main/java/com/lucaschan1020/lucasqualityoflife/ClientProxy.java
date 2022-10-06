@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.lucaschan1020.lucasqualityoflife;
 
 import cpw.mods.fml.common.event.*;
 

@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.lucaschan1020.lucasqualityoflife;
 
 import java.io.File;
 import net.minecraftforge.common.config.Configuration;
