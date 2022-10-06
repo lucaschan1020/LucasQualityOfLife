@@ -27,7 +27,7 @@ public class Fly extends CommandBase {
     }
 
     public int getRequiredPermissionLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -66,12 +66,5 @@ public class Fly extends CommandBase {
     @SubscribeEvent
     public void onDimensionChanged(cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent event) {
         event.player.sendPlayerAbilities();
-    }
-
-    @SubscribeEvent
-    public void onBlockBreak(PlayerEvent.BreakSpeed event) {
-        if (!event.entityPlayer.onGround) {
-            event.newSpeed = event.originalSpeed * 5;
-        }
     }
 }
